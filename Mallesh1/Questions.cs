@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text.RegularExpressions;
 
 class GfG
@@ -88,25 +89,34 @@ class GfG
         // For e.g. : Input : "+100", "-100", "3.1416", "-1E-16", "1.2.3", "+-5", "12e+5.4"//   Output : true, true, true, true, false, false, false
 
 
-        string[] input = new string[7];
+        //string[] input = new string[7];
 
-        List<string> answer = new List<string>();
 
-        for (int i = 0; i < input.Length; i++)
+        //for (int i = 0; i < input.Length; i++)
+        //{
+        //    input[i] = Console.ReadLine();
+
+        //    if (Regex.IsMatch(input[i], @"^\d+$"))
+        //    {
+        //        Console.Write("true");
+        //    }
+        //    else
+        //    {
+        //        Console.Write("false");
+        //    }
+        //}
+
+
+
+        //revers of a string
+        string[] s = "i like this program very much".Split(" ");
+        string ans = "";
+        for (int i = s.Length - 1; i >= 0; i--)
         {
-            input[i] = Console.ReadLine();
-
-            if (Regex.IsMatch(input[i], @"^\d+$"))
-            {
-                Console.Write("true");
-            }
-            else
-            {
-                Console.Write("false");
-            }
+            ans += s[i] + " ";
         }
-
-
+        Console.WriteLine("Reversed String:");
+        Console.WriteLine(ans);
 
         Console.ReadLine();
     }
