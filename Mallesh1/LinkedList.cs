@@ -5,7 +5,7 @@ class GfG
 
     class Node
     {
-        public int data;
+        public string data;
         public Node next;
     }
 
@@ -54,7 +54,7 @@ class GfG
     }
 
     // Utility function to create a new node. 
-    static Node newNode(int data)
+    static Node newNode(string data)
     {
         Node temp = new Node();
         temp.data = data;
@@ -65,11 +65,11 @@ class GfG
     public static void Main(String[] args)
     {
         /* Start with the empty list */
-        Node head = newNode(1);
-        head.next = newNode(2);
-        head.next.next = newNode(3);
-        head.next.next.next = newNode(4);
-        head.next.next.next.next = newNode(5);
+        Node head = newNode("a");
+        head.next = newNode("b");
+        head.next.next = newNode("c");
+        head.next.next.next = newNode("d");
+        head.next.next.next.next = newNode("e");
 
 
         Console.WriteLine("Gven Linked List");
