@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text.RegularExpressions;
 
 class GfG
 {
@@ -64,22 +66,47 @@ class GfG
 
     public static void Main(String[] args)
     {
-        /* Start with the empty list */
-        Node head = newNode("a");
-        head.next = newNode("b");
-        head.next.next = newNode("c");
-        head.next.next.next = newNode("d");
-        head.next.next.next.next = newNode("e");
+        ///* Start with the empty list */
+        //Node head = newNode("a");
+        //head.next = newNode("b");
+        //head.next.next = newNode("c");
+        //head.next.next.next = newNode("d");
+        //head.next.next.next.next = newNode("e");
 
 
-        Console.WriteLine("Gven Linked List");
-        printList(head);
+        //Console.WriteLine("Gven Linked List");
+        //printList(head);
 
-        head = deleteMid(head);
+        //head = deleteMid(head);
 
-        Console.WriteLine("Linked List after"
-                          + "deletion of middle");
-        printList(head);
+        //Console.WriteLine("Linked List after"
+        //                  + "deletion of middle");
+        //printList(head);
+
+
+        // How do you check whether a string stands for a number or not ? Numbers include positive and negative integers and floats ?
+        // For e.g. : Input : "+100", "-100", "3.1416", "-1E-16", "1.2.3", "+-5", "12e+5.4"//   Output : true, true, true, true, false, false, false
+
+
+        string[] input = new string[7];
+
+        List<string> answer = new List<string>();
+
+        for (int i = 0; i < input.Length; i++)
+        {
+            input[i] = Console.ReadLine();
+
+            if (Regex.IsMatch(input[i], @"^\d+$"))
+            {
+                Console.Write("true");
+            }
+            else
+            {
+                Console.Write("false");
+            }
+        }
+
+
 
         Console.ReadLine();
     }
